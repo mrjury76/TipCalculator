@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/startTextVIew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/base_amount"
+        app:layout_constraintEnd_toStartOf="@+id/inputEditText"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+    <TextView
+        android:id="@+id/tipPercentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="56dp"
+        android:hint="@string/percent"
+        android:textColorHint="#546E7A"
+        app:layout_constraintEnd_toStartOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@+id/startTextVIew" />
+
+    <TextView
+        android:id="@+id/tipTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:text="@string/tip_total"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tipOutputTextView"
+        app:layout_constraintEnd_toStartOf="@+id/tipOutputTextView" />
+
+    <TextView
+        android:id="@+id/totalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="41dp"
+        android:text="@string/total_amount"
+        app:layout_constraintBaseline_toBaselineOf="@+id/totalOutputTextView"
+        app:layout_constraintEnd_toStartOf="@+id/totalOutputTextView" />
+
+    <TextView
+        android:id="@+id/totalOutputTextView"
+        android:layout_width="127dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="33dp"
+        android:autofillHints=""
+        android:hint="@string/total"
+        android:textColorHint="#546E7A"
+        app:layout_constraintStart_toStartOf="@+id/inputEditText"
+        app:layout_constraintTop_toBottomOf="@+id/tipOutputTextView" />
+
+    <TextView
+        android:id="@+id/tipOutputTextView"
+        android:layout_width="76dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="68dp"
+        android:autofillHints=""
+        android:hint="@string/tip"
+        android:textColorHint="#546E7A"
+        app:layout_constraintStart_toStartOf="@+id/totalOutputTextView"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <EditText
+        android:id="@+id/inputEditText"
+        android:layout_width="206dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="76dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/enter_amount"
+        android:inputType="numberDecimal"
+        android:textColorHint="#546E7A"
+        app:layout_constraintBaseline_toBaselineOf="@+id/startTextVIew"
+        app:layout_constraintStart_toStartOf="@+id/titleTextView" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="203dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="28dp"
+        android:max="30"
+        android:progress="15"
+        app:layout_constraintStart_toStartOf="@+id/tipOutputTextView"
+        app:layout_constraintTop_toBottomOf="@+id/inputEditText" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="231dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="94dp"
+        android:gravity="center"
+        android:text="@string/titleOutput"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/tipMeterTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toEndOf="@+id/seekBar"
+        app:layout_constraintStart_toStartOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <TextView
+        android:id="@+id/authorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:text="@string/authorSignature"
+        android:textColor="@color/author"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/percent20Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/percent20"
+        android:backgroundTint="@color/lightGreen"
+        app:layout_constraintBaseline_toBaselineOf="@+id/percent15Button"
+        app:layout_constraintEnd_toStartOf="@+id/percent25Button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/percent15Button" />
+
+    <Button
+        android:id="@+id/percent15Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="67dp"
+        android:text="@string/percent15"
+        android:backgroundTint="@color/orange"
+        app:layout_constraintEnd_toStartOf="@+id/percent20Button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/totalOutputTextView" />
+
+    <Button
+        android:id="@+id/percent25Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/percent25"
+        android:backgroundTint="@color/darkGreen"
+        app:layout_constraintBaseline_toBaselineOf="@+id/percent20Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/percent20Button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

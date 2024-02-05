@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">TipCalculator</string>
+    <string name="titleOutput">Tip Calculator</string>
+    <string name="enter_amount">Enter Amount:</string>
+    <string name="total_amount">Total Amount:</string>
+    <string name="tip_total">Tip:</string>
+    <string name="base_amount">Base Amount:</string>
+    <string name="total">Total:</string>
+    <string name="tip">Tip:</string>
+    <string name="percent">Percent:</string>
+    <string name="authorSignature">MADE BY PATRICK THROWER</string>
+    <string name="poor">Poor</string>
+    <string name="acceptable">Acceptable</string>
+    <string name="good">Good</string>
+    <string name="amazing">Amazing</string>
+    <string name="percent20">20%</string>
+    <string name="percent15">15%</string>
+    <string name="percent25">25%</string>
+    <string name="zero">$0.00</string>
+</resources>
